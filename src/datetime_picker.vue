@@ -54,8 +54,8 @@
             <div v-on:click='changePeriod'>{{period}}</div>
           </div>
         </div>
-        <button type='button' v-on:click='clearDate' class='okButton'>Clear</button>
-        <button type='button' v-on:click='setDate' class='okButton ok'>OK</button>
+        <button type='button' v-on:click='clearDate' class='okButton'>Effacer</button>
+        <button type='button' v-on:click='setDate' class='okButton ok'>Valider</button>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@ import format from 'date-fns/format';
 import startOfDay from 'date-fns/start_of_day';
 import isEqual from 'date-fns/is_equal';
 
-const days = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+const days = ['Dim', 'Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam'];
 const AM = 'AM'
 const PM = 'PM'
 export default {
@@ -110,7 +110,7 @@ export default {
           return false
         }
       },
-      message: 'Only 0 (Sunday) and 1 (Monday) are supported.'
+      message: 'Seuls 0 (dimanche) et 1 (lundi) sont pris en charge'
     },
   },
   data () {
@@ -119,7 +119,7 @@ export default {
       hideCal: true,
       activePort: null,
       timeStamp: new Date(),
-      months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      months: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'],
       days: [],
       monthIndex: 0,
       hourIndex: 0,
@@ -273,7 +273,7 @@ export default {
       this.period = this.period === AM ? PM : AM
     },
     calendarClicked (event) {
-      if (event.target.id !== 'j-hour' && event.target.id !== 'j-minute') {
+      if (event.target.id !== 'j-heure' && event.target.id !== 'j-minute') {
         this.minuteSelectorVisible = false
         this.hourSelectorVisible = false
       }
@@ -424,7 +424,7 @@ export default {
         try {
           this.timeStamp = this.makeDateObject(this.value)
         } catch (e) {
-          console.warn(e.message +'. Current date is being used.')
+          console.warn(e.message +'. La date actuelle est utilisée.')
           this.timeStamp = new Date()
         }
         this.year = this.timeStamp.getFullYear()
