@@ -273,7 +273,7 @@ export default {
       this.period = this.period === AM ? PM : AM
     },
     calendarClicked (event) {
-      if (event.target.id !== 'j-heure' && event.target.id !== 'j-minute') {
+      if (event.target.id !== 'j-hour' && event.target.id !== 'j-minute') {
         this.minuteSelectorVisible = false
         this.hourSelectorVisible = false
       }
