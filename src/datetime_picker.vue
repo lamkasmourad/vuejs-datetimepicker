@@ -7,12 +7,12 @@
           <div class='year-month-wrapper'>
             <div class='month-setter'>
               <button type='button' class='nav-l' v-on:click='leftYear'>&#x3C;</button>
-              <span class='year'>{{year}}</span>
+              <span class='year m-14'>{{year}}</span>
               <button type='button' class='nav-r' v-on:click='rightYear' >&#x3E;</button>
             </div>
             <div class='month-setter'>
               <button type='button' class='nav-l' v-on:click='leftMonth'>&#x3C;</button>
-              <span class='month'>{{month}}</span>
+              <span class='month m-12'>{{month}}</span>
               <button type='button' class='nav-r' v-on:click='rightMonth'>&#x3E;</button>
             </div>
           </div>
@@ -692,5 +692,13 @@ export default {
     margin-top: 10px;
     cursor: pointer;
     background: transparent;
+  }
+
+  .m-12{
+    margin-left:12px;
+  }
+
+  .m-14{
+    margin-left:14px;
   }
 </style>
