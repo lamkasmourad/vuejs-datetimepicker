@@ -533,7 +533,7 @@ export default {
 <style scoped>
 
   .year-month-wrapper{
-    background-color: #ed4d00;
+    background-color: #008ecc;
   }
 
   input{
@@ -571,15 +571,15 @@ export default {
     cursor: pointer;
   }
   .days{
-    color: #ed4d00;
+    color: #008ecc;
     font-weight: bold;
   }
   .port:hover{
-    color: #ed4d00;
+    color: #008ecc;
     font-weight: bold;
   }
   .activePort, .activePort:hover {
-    background-color: #ed4d00;
+    background-color: #008ecc;
     color: white;
   }
   .month-setter, .year-setter{
@@ -595,7 +595,7 @@ export default {
   .nav-l, .nav-r {
     display: inline-block;
     width: 25px;
-    background-color: #ed4d00;
+    background-color: #008ecc;
     color: white;
     font-size: 16px;
     cursor: pointer;
@@ -666,7 +666,7 @@ export default {
     display:inline-block;
   }
   li.active{
-    background-color: #ed4d00;
+    background-color: #008ecc;
     color: white;
   }
   li{
@@ -682,7 +682,7 @@ export default {
     display: none;
   }
   .okButton{
-    color: #ed4d00;
+    color: #008ecc;
     font-size: 15px;
     font-weight: bold;
     padding: 0;
