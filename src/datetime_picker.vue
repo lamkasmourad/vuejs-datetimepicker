@@ -99,6 +99,10 @@ export default {
       type: Boolean,
       default: false
     },
+    enddate: {
+      type: Boolean,
+      default: false
+    },
     firstDayOfWeek: {
       default: 0,
       validator: function(value) {
@@ -324,7 +328,7 @@ export default {
       this.minute += ''
       d = d.replace(this.periodStyle === 24 ? 'H' : 'h', h.length < 2 ? '0' + h : '' + h )
       d = d.replace('i', this.minute.length < 2 ? '0' + this.minute : '' + this.minute)
-      d = d.replace('s', '00')
+      d = d.replace('s', this.enddate ? '59' : '00')
       this.$emit('input', d)
       this.date = d
       this.hideCal = true
