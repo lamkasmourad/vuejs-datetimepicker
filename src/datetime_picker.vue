@@ -594,7 +594,7 @@ export default {
     display: inline-block;
   }
   .nav-l:hover, .nav-r:hover {
-    background-color: #dc3c00;
+    background-color: #008ecc;
   }
   .nav-l, .nav-r {
     display: inline-block;
@@ -660,7 +660,7 @@ export default {
     padding:5px;
     margin:-5px -13px -5px -5px;
     list-style-type: none;
-    height: 100px;
+    height: 130px;
     overflow: auto;
     width:55px;
     color: #999;
