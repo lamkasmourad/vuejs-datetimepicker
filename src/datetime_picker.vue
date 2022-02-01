@@ -551,7 +551,7 @@ export default {
     position: relative;
   }
   .calender-div{
-    min-width: 270px;
+    min-width: 350px;
     box-shadow: 1px 2px 5px #ccc;
     background: #FFF;
     position: absolute;
@@ -565,7 +565,7 @@ export default {
   }
   .port, .days{
     display: inline-block;
-    width: 30px;
+    width: 45px;
     height: 30px;
     padding: 5px 3px;
     margin: 2px;
